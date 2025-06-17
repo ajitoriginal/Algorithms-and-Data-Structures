@@ -47,5 +47,12 @@ Objects and Arrays Big-O
     Shift/unshift/concat/slice/splice : O(n)
     forEach/map/filter/reduce : O(n)
 
-
+Math algorithms
+    Fibonacci sequence
+    Factorial of a number
+    Prime number
+    Power of two
+    Recursion
+    Fibonacci sequence with recursion
+    Factorial of a number with recursion
 */
