@@ -33,4 +33,19 @@ Asymptotic Notations
             --O(n^3) : Cubic
             --O(logn) : Logarithmic
 
+Objects and Arrays Big-O
+    --An object is a collection of key value pairs
+    insert/Remove/Access : O(1)
+    Search/Object.keys()/Object.values()/Object.entries() : O(n)
+
+    --An array is an ordered collection of values
+    insert/remove at end : O(1)
+    insert/remove at beginning : O(n)
+    Access : O(1)
+    Search : O(n)
+    Push/pop : O(1)
+    Shift/unshift/concat/slice/splice : O(n)
+    forEach/map/filter/reduce : O(n)
+
+
 */
