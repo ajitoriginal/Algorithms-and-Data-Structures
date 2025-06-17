@@ -64,4 +64,8 @@ Recursion
       same problem
     --It should always have a base case
     --It should always have a condition to terminate the recursion
+
+Search Algorithms
+    --Linear Search
+    --Binary Search & Recursive Binary Search
 */
