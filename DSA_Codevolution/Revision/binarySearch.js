@@ -1,4 +1,4 @@
-function BinarySearch(arr, target) {
+function binarySearch(arr, target) {
     if(arr.length) {
         let left_index = 0
         let right_index = arr.length - 1
@@ -20,7 +20,7 @@ function BinarySearch(arr, target) {
 
 // Big-O = O(logn)
 
-console.log(BinarySearch([-5, 2, 4, 6, 10], 10))
-console.log(BinarySearch([-5, 2, 4, 6, 10], 6))
-console.log(BinarySearch([-5, 2, 4, 6, 10], 20))
+console.log(binarySearch([-5, 2, 4, 6, 10], 10))
+console.log(binarySearch([-5, 2, 4, 6, 10], 6))
+console.log(binarySearch([-5, 2, 4, 6, 10], 20))
 
