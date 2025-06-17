@@ -55,4 +55,13 @@ Math algorithms
     Recursion
     Fibonacci sequence with recursion
     Factorial of a number with recursion
+
+Recursion
+    --a problem solving technique where the solution depends on solutions to smaller
+      instances of the same problem
+    --Recursion is when a function calls itself
+    --useful when you want to solve a problem by breaking down it into smaller versions of
+      same problem
+    --It should always have a base case
+    --It should always have a condition to terminate the recursion
 */
