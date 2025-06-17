@@ -1,15 +1,14 @@
-function recursiveFibonacci(n) {
-    if(n < 2) return n
-    return recursiveFibonacci(n-1) + recursiveFibonacci(n-2)
+function recursiveFactorial(n) {
+    if(n <= 0) return 1
+    return n * recursiveFactorial(n - 1)
 }
 
-// Big-O = O(n) Iterative
-// Big-O = (2^n) Recursive
+// Big-O = O(n)
 
-console.log(recursiveFibonacci(0))
-console.log(recursiveFibonacci(1))
-console.log(recursiveFibonacci(2))
-console.log(recursiveFibonacci(3))
-console.log(recursiveFibonacci(4))
-console.log(recursiveFibonacci(5))
-console.log(recursiveFibonacci(6))
+
+console.log(recursiveFactorial(0))
+console.log(recursiveFactorial(1))
+console.log(recursiveFactorial(2))
+console.log(recursiveFactorial(3))
+console.log(recursiveFactorial(4))
+console.log(recursiveFactorial(5))
