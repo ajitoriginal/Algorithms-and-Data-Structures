@@ -9,8 +9,6 @@ function quickSort(arr) {
         }
     }
     return [...quickSort(left), pivot, ...quickSort(right)]
-
-    return arr
 }
 
 console.log(quickSort([-6,20,8,-2,4]))
