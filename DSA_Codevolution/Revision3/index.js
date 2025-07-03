@@ -11,7 +11,7 @@ function bubbleSort(array) {
     }
     return array
 }
-// Big-O = O(n)
+// Big-O = O(n^2)
 console.log(bubbleSort([8,20,-2,4,-6]))
 //------------------------------
 // function binarySearchRecursive(sortedArray, target) {
