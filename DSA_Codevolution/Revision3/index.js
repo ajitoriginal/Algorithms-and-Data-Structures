@@ -1,21 +1,41 @@
-function factorial(n) {
-    let output = 1
-    if(n < 2) {
-        return output
+function isPrime(number) {
+    let output = true
+    if(number < 2) {
+        return false
     }
-    for(let i = n; i > 1; i--) {
-        output = output * i
+    for(let i = 2; i < number; i++) {
+        if(number % i === 0) {
+            output = false
+        }
     }
     return output
 }
 // Big-O = O(n)
-console.log(factorial(0))
-console.log(factorial(1))
-console.log(factorial(2))
-console.log(factorial(3))
-console.log(factorial(4))
-console.log(factorial(5))
+console.log(isPrime(0))
+console.log(isPrime(1))
+console.log(isPrime(2))
+console.log(isPrime(3))
+console.log(isPrime(4))
+console.log(isPrime(5))
 
+//------------------------------
+// function factorial(n) {
+//     let output = 1
+//     if(n < 2) {
+//         return output
+//     }
+//     for(let i = n; i > 1; i--) {
+//         output = output * i
+//     }
+//     return output
+// }
+// // Big-O = O(n)
+// console.log(factorial(0))
+// console.log(factorial(1))
+// console.log(factorial(2))
+// console.log(factorial(3))
+// console.log(factorial(4))
+// console.log(factorial(5))
 
 //------------------------------
 // function fibonacci(n) {
