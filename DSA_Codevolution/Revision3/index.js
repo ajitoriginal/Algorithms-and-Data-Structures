@@ -1,23 +1,39 @@
-function binarySearchRecursive(sortedArray, target) {
-    return search(sortedArray, target, 0, sortedArray.length - 1)
+function bubbleSort(array) {
+    let swapped = true
+    while(swapped) {
+        swapped = false
+        for(let i = 0; i < array.length - 1; i++) {
+            if(array[i] > array[i+1]) {
+                [array[i], array[i+1]] = [array[i+1], array[i]]
+                swapped = true
+            }
+        }
+    }
+    return array
 }
+// Big-O = O(n)
+console.log(bubbleSort([8,20,-2,4,-6]))
+//------------------------------
+// function binarySearchRecursive(sortedArray, target) {
+//     return search(sortedArray, target, 0, sortedArray.length - 1)
+// }
 
-function search(sortedArray, target, firstIndex, lastIndex) {
-    if(firstIndex > lastIndex) {
-        return -1
-    }
-    let midIndex = Math.floor((firstIndex + lastIndex) / 2)
-    if(target < sortedArray[midIndex]) {
-        return search(sortedArray, target, firstIndex, midIndex - 1)
-    } else if(target > sortedArray[midIndex]) {
-        return search(sortedArray, target, midIndex + 1, lastIndex)
-    } else {
-        return midIndex
-    }
-}
-console.log(binarySearchRecursive([-5,2,4,6,10],10))
-console.log(binarySearchRecursive([-5,2,4,6,10],6))
-console.log(binarySearchRecursive([-5,2,4,6,10],20))
+// function search(sortedArray, target, firstIndex, lastIndex) {
+//     if(firstIndex > lastIndex) {
+//         return -1
+//     }
+//     let midIndex = Math.floor((firstIndex + lastIndex) / 2)
+//     if(target < sortedArray[midIndex]) {
+//         return search(sortedArray, target, firstIndex, midIndex - 1)
+//     } else if(target > sortedArray[midIndex]) {
+//         return search(sortedArray, target, midIndex + 1, lastIndex)
+//     } else {
+//         return midIndex
+//     }
+// }
+// console.log(binarySearchRecursive([-5,2,4,6,10],10))
+// console.log(binarySearchRecursive([-5,2,4,6,10],6))
+// console.log(binarySearchRecursive([-5,2,4,6,10],20))
 //------------------------------
 // function binarySearch(sortedArray, target) {
 //     let firstIndex = 0, lastIndex = sortedArray.length - 1, midIndex;
