@@ -1,22 +1,39 @@
-function isPrime(number) {
-    let output = true
-    if(number < 2) {
+function isPowerOfTwo(number) {
+    if(number < 1) {
         return false
     }
-    for(let i = 2; i < number; i++) {
-        if(number % i === 0) {
-            output = false
+    while (number > 1) {
+        if(number % 2 !== 0) {
+            return false
         }
+        number = number / 2
     }
-    return output
+    return true
 }
-// Big-O = O(n)
-console.log(isPrime(0))
-console.log(isPrime(1))
-console.log(isPrime(2))
-console.log(isPrime(3))
-console.log(isPrime(4))
-console.log(isPrime(5))
+// Big-O = O(logn)
+console.log(isPowerOfTwo(1))
+console.log(isPowerOfTwo(2))
+console.log(isPowerOfTwo(5))
+//------------------------------
+// function isPrime(number) {
+//     let output = true
+//     if(number < 2) {
+//         return false
+//     }
+//     for(let i = 2; i < number; i++) {
+//         if(number % i === 0) {
+//             output = false
+//         }
+//     }
+//     return output
+// }
+// // Big-O = O(n)
+// console.log(isPrime(0))
+// console.log(isPrime(1))
+// console.log(isPrime(2))
+// console.log(isPrime(3))
+// console.log(isPrime(4))
+// console.log(isPrime(5))
 
 //------------------------------
 // function factorial(n) {
