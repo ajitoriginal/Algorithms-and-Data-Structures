@@ -1,19 +1,49 @@
-function isPowerOfTwo(number) {
-    if(number < 1) {
-        return false
+function factorialRecursive(n) {
+    if(n <= 1) {
+        return 1
     }
-    while (number > 1) {
-        if(number % 2 !== 0) {
-            return false
-        }
-        number = number / 2
-    }
-    return true
+    return n * factorialRecursive(n-1)
 }
-// Big-O = O(logn)
-console.log(isPowerOfTwo(1))
-console.log(isPowerOfTwo(2))
-console.log(isPowerOfTwo(5))
+// Big-O = O(n)
+console.log(factorialRecursive(0))
+console.log(factorialRecursive(1))
+console.log(factorialRecursive(2))
+console.log(factorialRecursive(3))
+console.log(factorialRecursive(4))
+console.log(factorialRecursive(5))
+console.log(factorialRecursive(6))
+//------------------------------
+// function fibonacciRecursive(n) {
+//     if(n < 2) {
+//         return n
+//     }
+//     return fibonacciRecursive(n-1) + fibonacciRecursive(n-2)
+// }
+// // Big-O = O(2^n)
+// console.log(fibonacciRecursive(0))
+// console.log(fibonacciRecursive(1))
+// console.log(fibonacciRecursive(2))
+// console.log(fibonacciRecursive(3))
+// console.log(fibonacciRecursive(4))
+// console.log(fibonacciRecursive(5))
+// console.log(fibonacciRecursive(6))
+//------------------------------
+// function isPowerOfTwo(number) {
+//     if(number < 1) {
+//         return false
+//     }
+//     while (number > 1) {
+//         if(number % 2 !== 0) {
+//             return false
+//         }
+//         number = number / 2
+//     }
+//     return true
+// }
+// // Big-O = O(logn)
+// console.log(isPowerOfTwo(1))
+// console.log(isPowerOfTwo(2))
+// console.log(isPowerOfTwo(5))
 //------------------------------
 // function isPrime(number) {
 //     let output = true
