@@ -1,17 +1,30 @@
-function factorialRecursive(n) {
-    if(n <= 1) {
-        return 1
+function linearSearch(array, target) {
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] === target) {
+            return i
+        }
     }
-    return n * factorialRecursive(n-1)
+    return -1
 }
 // Big-O = O(n)
-console.log(factorialRecursive(0))
-console.log(factorialRecursive(1))
-console.log(factorialRecursive(2))
-console.log(factorialRecursive(3))
-console.log(factorialRecursive(4))
-console.log(factorialRecursive(5))
-console.log(factorialRecursive(6))
+console.log(linearSearch([-5,2,10,4,6],10))
+console.log(linearSearch([-5,2,10,4,6],6))
+console.log(linearSearch([-5,2,10,4,6],20))
+//------------------------------
+// function factorialRecursive(n) {
+//     if(n <= 1) {
+//         return 1
+//     }
+//     return n * factorialRecursive(n-1)
+// }
+// // Big-O = O(n)
+// console.log(factorialRecursive(0))
+// console.log(factorialRecursive(1))
+// console.log(factorialRecursive(2))
+// console.log(factorialRecursive(3))
+// console.log(factorialRecursive(4))
+// console.log(factorialRecursive(5))
+// console.log(factorialRecursive(6))
 //------------------------------
 // function fibonacciRecursive(n) {
 //     if(n < 2) {
