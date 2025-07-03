@@ -1,15 +1,55 @@
-function linearSearch(array, target) {
-    for(let i = 0; i < array.length; i++) {
-        if(array[i] === target) {
-            return i
-        }
-    }
-    return -1
+function binarySearchRecursive(sortedArray, target) {
+    return search(sortedArray, target, 0, sortedArray.length - 1)
 }
-// Big-O = O(n)
-console.log(linearSearch([-5,2,10,4,6],10))
-console.log(linearSearch([-5,2,10,4,6],6))
-console.log(linearSearch([-5,2,10,4,6],20))
+
+function search(sortedArray, target, firstIndex, lastIndex) {
+    if(firstIndex > lastIndex) {
+        return -1
+    }
+    let midIndex = Math.floor((firstIndex + lastIndex) / 2)
+    if(target < sortedArray[midIndex]) {
+        return search(sortedArray, target, firstIndex, midIndex - 1)
+    } else if(target > sortedArray[midIndex]) {
+        return search(sortedArray, target, midIndex + 1, lastIndex)
+    } else {
+        return midIndex
+    }
+}
+console.log(binarySearchRecursive([-5,2,4,6,10],10))
+console.log(binarySearchRecursive([-5,2,4,6,10],6))
+console.log(binarySearchRecursive([-5,2,4,6,10],20))
+//------------------------------
+// function binarySearch(sortedArray, target) {
+//     let firstIndex = 0, lastIndex = sortedArray.length - 1, midIndex;
+//     while(firstIndex <= lastIndex) {
+//         midIndex = Math.floor((firstIndex + lastIndex) / 2)
+//         if(target > sortedArray[midIndex]) {
+//             firstIndex = midIndex + 1
+//         } else if(target < sortedArray[midIndex]) {
+//             lastIndex = midIndex - 1
+//         } else {
+//             return midIndex
+//         }
+//     }
+//     return -1
+// }
+// // Big-O = O(logn)
+// console.log(binarySearch([-5,2,4,6,10],10))
+// console.log(binarySearch([-5,2,4,6,10],6))
+// console.log(binarySearch([-5,2,4,6,10],20))
+//------------------------------
+// function linearSearch(array, target) {
+//     for(let i = 0; i < array.length; i++) {
+//         if(array[i] === target) {
+//             return i
+//         }
+//     }
+//     return -1
+// }
+// // Big-O = O(n)
+// console.log(linearSearch([-5,2,10,4,6],10))
+// console.log(linearSearch([-5,2,10,4,6],6))
+// console.log(linearSearch([-5,2,10,4,6],20))
 //------------------------------
 // function factorialRecursive(n) {
 //     if(n <= 1) {
@@ -77,7 +117,6 @@ console.log(linearSearch([-5,2,10,4,6],20))
 // console.log(isPrime(3))
 // console.log(isPrime(4))
 // console.log(isPrime(5))
-
 //------------------------------
 // function factorial(n) {
 //     let output = 1
@@ -96,7 +135,6 @@ console.log(linearSearch([-5,2,10,4,6],20))
 // console.log(factorial(3))
 // console.log(factorial(4))
 // console.log(factorial(5))
-
 //------------------------------
 // function fibonacci(n) {
 //     if(n < 1) {
